@@ -6483,14 +6483,6 @@ PERFORMANCE OF THIS SOFTWARE.
                             pin: true,
                             start: `top-=69 top`,
                             scrub: 1,
-                            snap: {
-                                snapTo: 1 / (panels.length - 1),
-                                inertia: false,
-                                duration: {
-                                    min: .1,
-                                    max: .1
-                                }
-                            },
                             end: () => "+=" + (panelsContainer.offsetWidth - innerWidth)
                         }
                     });
