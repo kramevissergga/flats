@@ -1346,9 +1346,8 @@ body::after {
 .gallery-project__main-slider:not(:last-child) {
   margin-bottom: 1.375rem
 }
-.gallery-project__main-slider a {
-  width: 100%;
-  height: 100%
+.gallery-project__main-slider .splide__slide {
+  cursor: pointer
 }
 .gallery-project__main-slider .splide__list {
   aspect-ratio: 1048/695
