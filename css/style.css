@@ -72,8 +72,7 @@
 *::before {
   display: inline-block
 }
-:active,
-:focus {
+input:focus {
   outline: 0
 }
 * {
@@ -843,6 +842,9 @@ body::after {
   align-self: center;
   max-width: 17.0625rem
 }
+.power-home {
+  position: relative
+}
 .power-home__content {
   max-width: 91.375rem
 }
@@ -897,11 +899,10 @@ body::after {
 .power-home__decor {
   position: absolute;
   z-index: -1;
-  bottom: 0;
-  right: 0;
+  right: -.9375%;
   aspect-ratio: 434/445;
-  -webkit-transform: translate(72.35023%,5rem);
-  transform: translate(72.35023%,5rem)
+  bottom: -5rem;
+  width: 22.604167%
 }
 .recreations-home__header {
   display: flex;
@@ -3207,12 +3208,6 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
 @media (max-width:75em) {
   .video-mastering__decor {
     display: none
-  }
-}
-@media (max-width:99.99875em) {
-  .power-home__decor {
-    -webkit-transform: translate(50%,5rem);
-    transform: translate(50%,5rem)
   }
 }
 @media (max-width:93.74875em) {
