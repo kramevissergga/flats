@@ -1050,9 +1050,7 @@
                 }
             }
             selectChange(e) {
-                const originalSelect = e.target;
-                this.selectBuild(originalSelect);
-                this.setSelectChange(originalSelect);
+                e.target;
             }
             setSelectChange(originalSelect) {
                 if (originalSelect.hasAttribute("data-validate")) formValidate.validateInput(originalSelect);
@@ -6498,6 +6496,9 @@ PERFORMANCE OF THIS SOFTWARE.
                 const pulsingBtn = e.target.closest(".pulsingButton");
                 pulsingBtn.closest(".flying-whatsapp").classList.toggle("shown");
             }
+        }));
+        document.addEventListener("selectCallback", (e => {
+            e.detail.select.dispatchEvent(new Event("change"));
         }));
         window["FLS"] = false;
         spoilers();

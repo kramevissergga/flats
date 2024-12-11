@@ -566,7 +566,7 @@ body::after {
   font-family: Inter,sans-serif;
   line-height: 1.4
 }
-.header .select_lang {
+.header .select {
   min-width: 4.1875rem;
   position: relative;
   z-index: 2
@@ -620,7 +620,7 @@ body::after {
   position: absolute;
   width: 3.75rem;
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   justify-content: center;
   z-index: 2;
   transition: all .3s linear;
@@ -3366,7 +3366,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
   .header__contact-us {
     display: none
   }
-  .header .select_lang {
+  .header .select {
     display: none
   }
   .menu__list:not(:last-child) {
