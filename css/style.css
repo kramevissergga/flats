@@ -1413,16 +1413,16 @@ body::after {
 .gallery-project__main-slider .splide__list {
   aspect-ratio: 1048/695
 }
-.gallery-project__main-slider .splide__slide__row:nth-child(odd) .splide__slide:first-child {
+.gallery-project__main-slider .splide__slide__row:nth-child(even) .splide__slide:first-child {
   width: calc(66% - .25rem)!important
 }
-.gallery-project__main-slider .splide__slide__row:nth-child(odd) .splide__slide:last-child {
-  width: calc(34% - .25rem)!important
-}
-.gallery-project__main-slider .splide__slide__row:nth-child(even) .splide__slide:first-child {
-  width: calc(34% - .25rem)!important
-}
 .gallery-project__main-slider .splide__slide__row:nth-child(even) .splide__slide:last-child {
+  width: calc(34% - .25rem)!important
+}
+.gallery-project__main-slider .splide__slide__row:nth-child(odd) .splide__slide:first-child {
+  width: calc(34% - .25rem)!important
+}
+.gallery-project__main-slider .splide__slide__row:nth-child(odd) .splide__slide:last-child {
   width: calc(66% - .25rem)!important
 }
 .gallery-project__thumbnail-slider .splide__slide {
@@ -1744,11 +1744,12 @@ body::after {
   height: 100%
 }
 [data-ba-before] img {
-  width: 100%
+  width: 100%;
+  height: 100%
 }
 [data-ba-after] {
   position: absolute;
-  width: 50%;
+  width: 13.636364%;
   height: 100%;
   top: 0;
   right: 0;
@@ -1764,7 +1765,7 @@ body::after {
   cursor: -webkit-grab;
   cursor: grab;
   position: absolute;
-  left: 50%;
+  right: 13.636364%;
   top: 0;
   height: 100%;
   width: .5rem;
