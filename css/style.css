@@ -1527,9 +1527,10 @@ body::after {
   position: relative;
   display: flex;
   flex-direction: column;
-  align-items: end;
   overflow: hidden;
-  padding: 3.75rem
+  padding: 3.75rem;
+  padding-left: 11.25rem;
+  padding-right: 1.25rem
 }
 .contacts__bg {
   position: absolute;
@@ -1548,7 +1549,6 @@ body::after {
 }
 .contacts__main-title {
   color: #fff;
-  font-size: 3.5rem;
   line-height: 1.21
 }
 .contacts__main-title:not(:last-child) {
@@ -2834,10 +2834,12 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
     -webkit-transform: translateY(-50%);
     transform: translateY(-50%);
     z-index: -1;
-    width: 25.25rem
+    width: 21.041667%;
+    max-width: 25.25rem
   }
   .eixample__contacts {
-    min-height: 39.6875rem
+    min-height: 39.6875rem;
+    text-align: center
   }
   .eixample__history {
     min-height: 38.25rem
@@ -3008,22 +3010,8 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
     display: flex;
     align-items: center
   }
-  .contacts {
-    display: grid;
-    grid-template-columns: 975fr 806fr
-  }
-  .contacts__content {
-    padding-top: 3.6875rem;
-    padding-bottom: 2.125rem;
-    padding-right: 1.25rem
-  }
   .video-mastering__content {
     margin-right: 2.75rem
-  }
-}
-@media (min-width:61.99875em)and (min-width:102.5em) {
-  .contacts {
-    gap: 8.6875rem
   }
 }
 @media (min-width:68.74875em) {
@@ -3033,6 +3021,20 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
   }
   .located-eixample--reverse .located-eixample__container {
     flex-direction: row-reverse
+  }
+  .contacts {
+    display: grid;
+    grid-template-columns: 975fr 806fr
+  }
+  .contacts__content {
+    padding-top: 3.6875rem;
+    padding-bottom: 2.125rem;
+    padding-right: 1.25rem
+  }
+}
+@media (min-width:68.74875em)and (min-width:102.5em) {
+  .contacts {
+    gap: 8.6875rem
   }
 }
 @media (min-width:74.99875em) {
@@ -3106,6 +3108,9 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
   .services-home__name:not(:last-child) {
     margin-bottom: 2rem
   }
+  .eixample__contacts .contacts-home__container {
+    max-width: 61.75rem
+  }
   .eixample__bg-section,
   .eixample__scene {
     min-height: 51.25rem
@@ -3152,8 +3157,8 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
   .page__services {
     padding-top: 3.75rem
   }
-  .contacts__body {
-    padding-right: 10.5rem
+  .contacts__main-title {
+    font-size: 3.5rem
   }
   .contacts__title {
     font-size: 2.25rem
@@ -3361,6 +3366,45 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
     transform: none;
     padding: .9375rem;
     margin-top: -3.8125rem
+  }
+  .contacts__body {
+    padding: 3rem 1.4375rem;
+    min-height: 32.25rem;
+    align-items: end
+  }
+  .contacts__body:not(:last-child) {
+    margin-bottom: 3.5rem
+  }
+  .contacts__main-title {
+    font-size: 2.25rem
+  }
+  .contacts__main-title:not(:last-child) {
+    margin-bottom: 2.5rem
+  }
+  .contacts__content {
+    padding: 0 1.25rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 3.5rem
+  }
+  .contacts__form {
+    padding: 1.25rem 1.75rem 2rem;
+    gap: 1rem
+  }
+  .contacts__input {
+    min-height: 3.3125rem
+  }
+  .contacts__textarea {
+    min-height: 8.375rem;
+    padding-top: 1.25rem
+  }
+  .contacts__checkbox {
+    font-size: .875rem;
+    line-height: 1.57
+  }
+  .contacts__checkbox::before {
+    margin-top: .1875rem
   }
 }
 @media (max-width:61.99875em) {
@@ -3604,44 +3648,6 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
   .service-desc__image:not(:last-child) {
     margin-bottom: 2.5rem
   }
-  .contacts__body {
-    padding: 3rem 1.4375rem;
-    min-height: 32.4375rem
-  }
-  .contacts__body:not(:last-child) {
-    margin-bottom: 3.5rem
-  }
-  .contacts__main-title {
-    font-size: 2.25rem
-  }
-  .contacts__main-title:not(:last-child) {
-    margin-bottom: 2.5rem
-  }
-  .contacts__content {
-    padding: 0 1.25rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-bottom: 3.5rem
-  }
-  .contacts__form {
-    padding: 1.25rem 1.75rem 2rem;
-    gap: 1rem
-  }
-  .contacts__input {
-    min-height: 3.3125rem
-  }
-  .contacts__textarea {
-    min-height: 8.375rem;
-    padding-top: 1.25rem
-  }
-  .contacts__checkbox {
-    font-size: .875rem;
-    line-height: 1.57
-  }
-  .contacts__checkbox::before {
-    margin-top: .1875rem
-  }
   .mastering__hero {
     aspect-ratio: 390/325
   }
@@ -3766,8 +3772,8 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
     height: calc(100% - 2.5rem);
     top: auto;
     bottom: 0;
-    -webkit-transform: translateY(2%);
-    transform: translateY(2%)
+    -webkit-transform: translateX(-11.764706%) translateY(2%);
+    transform: translateX(-11.764706%) translateY(2%)
   }
   .contacts__wrapper {
     max-width: 15.9375rem
@@ -3982,8 +3988,8 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
   .page__services {
     padding-top: 2.5rem
   }
-  .contacts__body {
-    padding-right: 1.25rem
+  .contacts__main-title {
+    font-size: 2.25rem
   }
   .contacts__title {
     font-size: 1.5rem
@@ -4266,14 +4272,14 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
       padding-top: calc(2.5rem + 1.25*(100vw - 24.375rem)/ 78.125)
     }
   }
-  @supports (padding-right:clamp(1.25rem ,-1.636rem + 11.84vw ,10.5rem)) {
-    .contacts__body {
-      padding-right: clamp(1.25rem ,-1.636rem + 11.84vw ,10.5rem)
+  @supports (font-size:clamp(2.25rem ,1.86rem + 1.6vw ,3.5rem)) {
+    .contacts__main-title {
+      font-size: clamp(2.25rem ,1.86rem + 1.6vw ,3.5rem)
     }
   }
-  @supports not (padding-right:clamp(1.25rem ,-1.636rem + 11.84vw ,10.5rem)) {
-    .contacts__body {
-      padding-right: calc(1.25rem + 9.25*(100vw - 24.375rem)/ 78.125)
+  @supports not (font-size:clamp(2.25rem ,1.86rem + 1.6vw ,3.5rem)) {
+    .contacts__main-title {
+      font-size: calc(2.25rem + 1.25*(100vw - 24.375rem)/ 78.125)
     }
   }
   @supports (font-size:clamp(1.5rem ,1.266rem + 0.96vw ,2.25rem)) {
@@ -4388,6 +4394,16 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
       -webkit-column-gap: calc(3.125rem + 3.8125*(100vw - 61.99875rem)/ 40.50125);
       -moz-column-gap: calc(3.125rem + 3.8125*(100vw - 61.99875rem)/ 40.50125);
       column-gap: calc(3.125rem + 3.8125*(100vw - 61.99875rem)/ 40.50125)
+    }
+  }
+  @supports (max-width:clamp(31.25rem ,-15.4389756489rem + 75.3063177062vw ,61.75rem)) {
+    .eixample__contacts .contacts-home__container {
+      max-width: clamp(31.25rem ,-15.4389756489rem + 75.3063177062vw ,61.75rem)
+    }
+  }
+  @supports not (max-width:clamp(31.25rem ,-15.4389756489rem + 75.3063177062vw ,61.75rem)) {
+    .eixample__contacts .contacts-home__container {
+      max-width: calc(31.25rem + 30.5*(100vw - 61.99875rem)/ 40.50125)
     }
   }
   @supports (padding-left:clamp(1.25rem ,-3.8207289127rem + 8.1787599148vw ,4.5625rem)) {
@@ -4518,15 +4534,15 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
     }
   }
 }
-@media (min-width:61.99875em)and (min-width:61.99875em)and (max-width:102.5em) {
-  @supports (gap:clamp(1.875rem ,-8.5534802167rem + 16.8204685041vw ,8.6875rem)) {
+@media (min-width:68.74875em)and (min-width:68.74875em)and (max-width:102.5em) {
+  @supports (gap:clamp(1.875rem ,-12.0015485538rem + 20.1844376134vw ,8.6875rem)) {
     .contacts {
-      gap: clamp(1.875rem ,-8.5534802167rem + 16.8204685041vw ,8.6875rem)
+      gap: clamp(1.875rem ,-12.0015485538rem + 20.1844376134vw ,8.6875rem)
     }
   }
-  @supports not (gap:clamp(1.875rem ,-8.5534802167rem + 16.8204685041vw ,8.6875rem)) {
+  @supports not (gap:clamp(1.875rem ,-12.0015485538rem + 20.1844376134vw ,8.6875rem)) {
     .contacts {
-      gap: calc(1.875rem + 6.8125*(100vw - 61.99875rem)/ 40.50125)
+      gap: calc(1.875rem + 6.8125*(100vw - 68.74875rem)/ 33.75125)
     }
   }
 }
