@@ -6450,6 +6450,12 @@ PERFORMANCE OF THIS SOFTWARE.
         const da = new DynamicAdapt("max");
         da.init();
         gsap.registerPlugin(ScrollToPlugin, ScrollTrigger);
+        function openGalleryById(galleryId) {
+            if (modules_flsModules.gallery && modules_flsModules.gallery.length) {
+                const targetGallery = modules_flsModules.gallery.find((item => item.gallery.id === galleryId));
+                if (targetGallery) targetGallery.galleryClass.openGallery();
+            }
+        }
         let panelsSection = document.querySelector("#panels");
         if (panelsSection) {
             let tween, panelsContainer = document.querySelector("#panels-container");
@@ -6495,6 +6501,10 @@ PERFORMANCE OF THIS SOFTWARE.
             if (e.target.closest(".pulsingButton")) {
                 const pulsingBtn = e.target.closest(".pulsingButton");
                 pulsingBtn.closest(".flying-whatsapp").classList.toggle("shown");
+            }
+            if (e.target.closest("[data-gallery-id]")) {
+                const galleryBtn = e.target.closest("[data-gallery-id]");
+                openGalleryById(galleryBtn.dataset.galleryId);
             }
         }));
         document.addEventListener("selectCallback", (e => {
